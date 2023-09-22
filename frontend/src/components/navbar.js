@@ -4,16 +4,16 @@ import React from 'react'
 
 const Navbar = ({setStart,setLogin,setSignup}) => {
   return (
-    <div className='flex justify-between sm:my-8 sm:mx-32'>
+    <div className='flex justify-between sm:my-8 sm:mx-32 mx-4 my-4'>
        <div>SafeJourney</div>
        <div className='flex justify-between'>
-          <div className='me-4 p-1' onClick={(e)=>{
+          <div className='me-4 p-1 cursor-pinter' onClick={(e)=>{
           setStart(false)
           setLogin(true)
           setSignup(false)
           }
           }>Login</div>
-          <div className='p-1 bg-gray-200 rounded-lg' onClick={(e)=>{
+          <div className='p-1 bg-gray-300 rounded-lg cursor-pointer' onClick={(e)=>{
           setStart(false)
           setSignup(true)
           setLogin(false)

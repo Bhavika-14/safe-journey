@@ -1,14 +1,14 @@
 import React from 'react'
 import Navbar from './navbar'
 
-const Login = () => {
+const Login = ({setDashboard,user}) => {
   return (
     <div>
-      <div className='flex justify-center sm:my-32 '>
+      <div className='flex justify-center my-32 '>
         <div className='flex flex-col sm:w-[30%] '>
             
   
-            <div className='sm:my-4 text-center'>Login</div>
+            <div className='my-4 text-center text-2xl'>Login</div>
   
             <div>
                 <form>
@@ -22,7 +22,7 @@ const Login = () => {
                     </div>
                     
                     
-                    <div className='text-center py-2 rounded-md my-4 bg-gray-200'><button>Confirm</button></div>
+                    <div className='text-center py-2 rounded-md my-6 bg-gray-300'><button>Confirm</button></div>
                 </form>
                 
             </div>
