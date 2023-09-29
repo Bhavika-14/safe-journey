@@ -9,7 +9,7 @@ const Confirmation = ({setConfirmation,setResult,setFinding,getPickupCoordinates
      getPickupCoordinates()
      getDropoffCoordinates()
   }
-  ,[])
+  ,[getPickupCoordinates,getDropoffCoordinates])
 
   const handleClick=()=>{
     setLoading(true)

@@ -64,7 +64,7 @@ const Map = ({pickupCoordinates,dropoffCoordinates}) => {
     
     console.log(map.current)
   
-  }, [pickupCoordinates,dropoffCoordinates]);
+  }, [lng,lat,zoom,API_KEY,pickupCoordinates,dropoffCoordinates]);
   return (
     <div className='w-[100%] h-[100%] relative'>
       

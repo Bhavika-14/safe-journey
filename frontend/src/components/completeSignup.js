@@ -3,6 +3,7 @@ import React,{ useState } from 'react'
 import { db, storage } from "@/app/firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
+import Image from 'next/image';
 
 const CompleteSignup = ({setShowCompleteSignup,image,user,setDashboard,firstName,lastName,dob,email,password,setUser}) => {
   const [loading,setLoading]=useState(false)
@@ -118,14 +119,14 @@ const CompleteSignup = ({setShowCompleteSignup,image,user,setDashboard,firstName
         </div>
 
         <div className='flex justify-center my-8'>
-            {image && <img src={URL.createObjectURL(image)} className='rounded-full h-36 w-36 object-cover border-solid border-black border-2' />}
+            {image && <Image alt='profile picture' src={URL.createObjectURL(image)} className='rounded-full h-36 w-36 object-cover border-solid border-black border-2' />}
             {!image && <div className='rounded-full h-36 w-36 bg-gray-300' />}
         </div>
 
         
 
         <div className='my-4'>
-            You're now ready to find a travel partner.
+            You&apos;re now ready to find a travel partner.
         </div>
 
         <div className='text-center bg-blue-500 text-white py-2 px-2 rounded-md my-4 cursor-pointer' onClick={handleClick}>Continue</div>

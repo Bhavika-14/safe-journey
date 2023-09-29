@@ -1,4 +1,5 @@
 import React,{ useRef,useState } from 'react'
+import Image from 'next/image'
 
 const Profile = ({setShowProfile,setShowCompleteSignup,image,setImage}) => {
 
@@ -32,7 +33,7 @@ const Profile = ({setShowProfile,setShowCompleteSignup,image,setImage}) => {
             </div>
 
             <div className='flex justify-center my-8'>
-                {image && <img src={URL.createObjectURL(image)} className='rounded-full h-36 w-36 object-cover border-solid border-black border-2' />}
+                {image && <Image src={URL.createObjectURL(image)} className='rounded-full h-36 w-36 object-cover border-solid border-black border-2' />}
                 {!image && <div className='rounded-full h-36 w-36 bg-blue-200' />}
             </div>
 
