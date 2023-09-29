@@ -6,7 +6,7 @@ import Password from './password'
 import Profile from './profile'
 import CompleteSignup from './completeSignup'
 
-const Signup = ({setDashboard,user}) => {
+const Signup = ({setDashboard,user,setUser}) => {
   
   const [showRegister,setShowRegister]=useState(true)
   const [showEmail,setShowEmail]=useState(false)
@@ -29,7 +29,7 @@ const Signup = ({setDashboard,user}) => {
       {showVerification && <Verification setShowVerification={setShowVerification} setShowPassword={setShowPassword} />}
       {showPassword && <Password setShowPassword={setShowPassword} setShowProfile={setShowProfile} password={password} setPassword={setPassword} email={email} />}
       {showProfile && <Profile setShowProfile={setShowProfile} setShowCompleteSignup={setShowCompleteSignup} image={image} setImage={setImage} />}
-      {showCompleteSignup && <CompleteSignup setShowCompleteSignup={setShowCompleteSignup} image={image} user={user} setDashboard={setDashboard} />}
+      {showCompleteSignup && <CompleteSignup setShowCompleteSignup={setShowCompleteSignup} image={image} user={user} setDashboard={setDashboard} firstName={firstName} lastName={lastName} dob={dob} email={email} password={password} setUser={setUser} />}
 
       
     </div>

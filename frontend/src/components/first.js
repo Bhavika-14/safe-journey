@@ -19,10 +19,10 @@ const First = () => {
 
   return (
     <div>
-    <Navbar setLogin={setLogin} setSignup={setSignup} setStart={setStart} />
+    {!start && <Navbar setLogin={setLogin} setSignup={setSignup} setStart={setStart} />}
     {start && <Start setLogin={setLogin} setSignup={setSignup} setStart={setStart} />}
-    {login && <Login setDashboard={setDashboard} user={user} />}
-    {signup && <Signup setDashboard={setDashboard} user={user} />}
+    {login && <Login setDashboard={setDashboard} user={user} setUser={setUser} setLogin={setLogin} />}
+    {signup && <Signup setDashboard={setDashboard} user={user} setUser={setUser} />}
     {dashboard && <Dashboard user={user} />}
     </div>
 

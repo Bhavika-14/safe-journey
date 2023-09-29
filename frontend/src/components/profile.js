@@ -13,6 +13,9 @@ const Profile = ({setShowProfile,setShowCompleteSignup,image,setImage}) => {
   }
 
   const handleClick=()=>{
+    if(!image){
+      return
+    }
     setShowProfile(false)
     setShowCompleteSignup(true)
   }
@@ -24,22 +27,24 @@ const Profile = ({setShowProfile,setShowCompleteSignup,image,setImage}) => {
 
             </div>
 
-            <div className='flex justify-center my-8'>
-                {image && <img src={URL.createObjectURL(image)} className='rounded-full h-36 w-36 object-cover border-solid border-black border-2' />}
-                {!image && <div className='rounded-full h-36 w-36 bg-gray-200' />}
-            </div>
-
-            <div>
-                <input type='file' ref={inputRef} onChange={handleImageChange} style={{display:"none"}} />
-
-            </div>
-
-            <div className='my-4'>
+            <div className='my-4 sm:text-lg text-sm text-center'>
                 Your safety is our greatest priority. Adding a photo will help your travel partner identify you when you meet up.
             </div>
 
-            <div className='text-center bg-gray-300 py-2 px-2 rounded-md my-4 cursor-pointer' onClick={handleImageClick}>Upload from library</div>
-            <div className='text-center bg-gray-300 py-2 px-2 rounded-md my-4 cursor-pointer' onClick={handleClick}>Continue</div>
+            <div className='flex justify-center my-8'>
+                {image && <img src={URL.createObjectURL(image)} className='rounded-full h-36 w-36 object-cover border-solid border-black border-2' />}
+                {!image && <div className='rounded-full h-36 w-36 bg-blue-200' />}
+            </div>
+
+            <div>
+                <input type='file' required ref={inputRef} onChange={handleImageChange} style={{display:"none"}} />
+
+            </div>
+
+            
+
+            <div className='text-center bg-blue-500 text-white py-2 px-2 rounded-md my-4 cursor-pointer' onClick={handleImageClick}>Upload from library</div>
+            <div className='text-center bg-blue-500 text-white py-2 px-2 rounded-md my-4 cursor-pointer' onClick={handleClick}>Continue</div>
 
         </div>
 
