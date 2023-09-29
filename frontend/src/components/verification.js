@@ -32,7 +32,7 @@ const Verification = ({setShowVerification,setShowPassword}) => {
   
             <div className='text-center py-2 rounded-md my-4 sm:mt-8 bg-blue-500 text-white cursor-pointer w-[100%]' onClick={handleClick}>Continue</div>
 
-            {!notCorrect && <div className='text-md mt-4 sm:text-center'>Didn't receive a code? Click here to resend</div>}
+            {!notCorrect && <div className='text-md mt-4 sm:text-center'>Didn&apos;t receive a code? Click here to resend</div>}
             {notCorrect && <div className='text-md mt-4 sm:text-center'>Incorrect Code. Click here to resend</div>}
                 
   
