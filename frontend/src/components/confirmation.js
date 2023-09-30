@@ -8,8 +8,10 @@ const Confirmation = ({setConfirmation,setResult,setFinding,getPickupCoordinates
     console.log("hello")
      getPickupCoordinates()
      getDropoffCoordinates()
+
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }
-  ,[getPickupCoordinates,getDropoffCoordinates])
+  ,[])
 
   const handleClick=()=>{
     setLoading(true)
