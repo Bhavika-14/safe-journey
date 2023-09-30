@@ -59,12 +59,16 @@ const Map = ({pickupCoordinates,dropoffCoordinates}) => {
     if(pickupCoordinates && dropoffCoordinates){
       console.log(pickupCoordinates,dropoffCoordinates)
       map.current.fitBounds([pickupCoordinates,dropoffCoordinates],{ padding:50})
+
+      
     }
    console.log("map",pickupCoordinates,dropoffCoordinates)
     
     console.log(map.current)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   
-  }, [lng,lat,zoom,API_KEY,pickupCoordinates,dropoffCoordinates]);
+  }, [pickupCoordinates,dropoffCoordinates]);
   return (
     <div className='w-[100%] h-[100%] relative'>
       
