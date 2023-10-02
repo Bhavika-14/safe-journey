@@ -51,16 +51,16 @@ const Result = ({setResult,setChatID,setReceiverID,setShowChat,senderID,receiver
         <div className='w-[85%]'>
           {!loading && <div>
             <div className='mt-4'>Meet {element.a_firstname+" "+element.a_lastname} at {pickupLocation}</div>
-            <div className='justify-center flex'><img alt='profile picture' width={500} height={500} src={element.photoURL} className='rounded-full h-36 w-36 object-cover border-solid border-black border-2' /></div>
-            <div className='mt-2 p-2 text-white text-center bg-black rounded-md cursor-pointer' onClick={handleChat}>Message</div>
-            <div className='mt-2 p-2 text-white text-center bg-black rounded-md cursor-pointer'>Cancel Journey</div>
+            <div className='justify-center flex'><img alt='profile picture' width={500} height={500} src={element.photoURL} className='rounded-full sm:my-2 h-36 w-36 object-cover border-solid border-black border-2' /></div>
+            <div className='mt-2 p-2 text-white text-center bg-blue-500 rounded-md cursor-pointer' onClick={handleChat}>Message</div>
+            <div className='mt-2 p-2 text-white text-center bg-blue-500 rounded-md cursor-pointer'>Cancel Journey</div>
         </div>}
         </div>
           
         {loading && <div className='sm:text-2xl sm:mt-16 mt-16 text-center'>
           Finding Travel Partner...
 
-          <svg class="animate-spin h-5 w-5 ... color-black text-center" viewBox="0 0 24 24">  </svg>
+          
 
 
 
