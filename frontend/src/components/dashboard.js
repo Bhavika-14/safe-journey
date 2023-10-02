@@ -10,7 +10,7 @@ import Map from './map'
 import Chat from './chat'
 require('dotenv').config()
 
-const Dashboard = () => {
+const Dashboard = ({user}) => {
 
   const [finding,setFinding]=useState(true)
   const [confirmation,setConfirmation]=useState(false)
@@ -23,6 +23,7 @@ const Dashboard = () => {
   const [chatID,setChatID]=useState("41")
   const [senderID,setSenderID]=useState("1")
   const [receiverID,setReceiverID]=useState(null)
+  const [requestID,setRequestID]=useState(null)
   
   const getPickupCoordinates=async()=>{
     const response =await fetch(`https://api.maptiler.com/geocoding/${pickupLocation}.json?autocomplete=false&fuzzyMatch=true&limit=3&key=${process.env.NEXT_PUBLIC_MAPLIBRE_API_KEY}`)
@@ -59,8 +60,8 @@ const Dashboard = () => {
         </div>
         <div className='sm:w-[30%] sm:px-2'>
           {finding && <Finding setFinding={setFinding} setConfirmation={setConfirmation} setPickupLocation={setPickupLocation} setDropoffLocation={setDropoffLocation} />}
-          {confirmation && <Confirmation setConfirmation={setConfirmation} setResult={setResult} setFinding={setFinding} getPickupCoordinates={getPickupCoordinates} getDropoffCoordinates={getDropoffCoordinates} pickupLocation={pickupLocation} dropoffLocation={dropoffLocation} />}
-          {result && <Result setResult={setResult} setChatID={setChatID} setReceiverID={setReceiverID} setShowChat={setShowChat} senderID={senderID} receiverID={receiverID} />}
+          {confirmation && <Confirmation setConfirmation={setConfirmation} setResult={setResult} setFinding={setFinding} getPickupCoordinates={getPickupCoordinates} getDropoffCoordinates={getDropoffCoordinates} pickupLocation={pickupLocation} dropoffLocation={dropoffLocation} pickupCoordinates={pickupCoordinates} dropoffCoordinates={dropoffCoordinates} user={user} setRequestID={setRequestID} />}
+          {result && <Result setResult={setResult} setChatID={setChatID} setReceiverID={setReceiverID} setShowChat={setShowChat} senderID={senderID} receiverID={receiverID} user={user} pickupCoordinates={pickupCoordinates} dropoffCoordinates={dropoffCoordinates} requestID={requestID} pickupLocation={pickupLocation} />}
         </div>
       </div>
 }

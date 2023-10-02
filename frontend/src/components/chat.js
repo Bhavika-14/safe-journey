@@ -13,7 +13,7 @@ const Chat = ({chatID,senderID,receiverID}) => {
     const getChat=async()=>{
       try{
         
-        
+        console.log(chatID)
         const res=await getDoc(doc(db,"chats",chatID))
         console.log(res)
 

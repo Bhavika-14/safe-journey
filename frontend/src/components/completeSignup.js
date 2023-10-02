@@ -35,7 +35,7 @@ const CompleteSignup = ({setShowCompleteSignup,image,user,setDashboard,firstName
         setUser(
           {
             firstname:res.firstname,
-            lastName:res.lastname,
+            lastname:res.lastname,
             email:res.email,
             id:res.id
           }
@@ -119,7 +119,7 @@ const CompleteSignup = ({setShowCompleteSignup,image,user,setDashboard,firstName
         </div>
 
         <div className='flex justify-center my-8'>
-            {image && <Image alt='profile picture' src={URL.createObjectURL(image)} className='rounded-full h-36 w-36 object-cover border-solid border-black border-2' />}
+            {image && <Image alt='profile picture' width={500} height={500} src={URL.createObjectURL(image)} className='rounded-full h-36 w-36 object-cover border-solid border-black border-2' />}
             {!image && <div className='rounded-full h-36 w-36 bg-gray-300' />}
         </div>
 

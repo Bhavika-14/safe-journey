@@ -41,7 +41,7 @@ const Login = ({setDashboard,user,setUser,setLogin}) => {
         setUser(
           {
             firstname:res.firstname,
-            lastName:res.lastname,
+            lastname:res.lastname,
             email:res.email,
             id:res.id
           }
