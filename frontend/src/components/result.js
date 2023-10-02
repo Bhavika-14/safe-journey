@@ -55,7 +55,7 @@ const Result = ({setResult,setChatID,setReceiverID,setShowChat,senderID,receiver
             <div className='mt-2 p-2 text-white text-center bg-blue-500 rounded-md cursor-pointer' onClick={handleChat}>Message</div>
             <div className='mt-2 p-2 text-white text-center bg-blue-500 rounded-md cursor-pointer'>Cancel Journey</div>
         </div>}
-        </div>
+        
           
         {loading && <div className='sm:text-2xl sm:mt-16 mt-16 text-center'>
           Finding Travel Partner...
@@ -66,6 +66,7 @@ const Result = ({setResult,setChatID,setReceiverID,setShowChat,senderID,receiver
 
         </div>
           }
+          </div>
     </div>
   )
 }
