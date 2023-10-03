@@ -1,12 +1,12 @@
 import React from 'react'
 import Navbar from './navbar'
 
-const Email = ({setShowEmail,setShowVerification,email,setEmail}) => {
+const Email = ({setShowEmail,setShowPassword,email,setEmail}) => {
 
   const handleSubmit=(e)=>{
     e.preventDefault()
     setShowEmail(false)
-    setShowVerification(true)
+    setShowPassword(true)
 
   }
   return (

@@ -25,7 +25,7 @@ const Signup = ({setDashboard,user,setUser}) => {
   return (
     <div>
       {showRegister && <Register setShowRegister={setShowRegister} setShowEmail={setShowEmail} firstName={firstName} lastName={lastName} dob={dob} setFirstName={setFirstName} setLastName={setLastName} setdob={setdob} />}
-      {showEmail && <Email setShowEmail={setShowEmail} setShowVerification={setShowVerification} email={email} setEmail={setEmail} />}
+      {showEmail && <Email setShowEmail={setShowEmail} setShowPassword={setShowPassword} email={email} setEmail={setEmail} />}
       {showVerification && <Verification setShowVerification={setShowVerification} setShowPassword={setShowPassword} />}
       {showPassword && <Password setShowPassword={setShowPassword} setShowProfile={setShowProfile} password={password} setPassword={setPassword} email={email} />}
       {showProfile && <Profile setShowProfile={setShowProfile} setShowCompleteSignup={setShowCompleteSignup} image={image} setImage={setImage} />}
